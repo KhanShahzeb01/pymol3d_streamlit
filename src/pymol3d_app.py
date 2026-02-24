@@ -32,6 +32,23 @@ from pymol3d_lib import (
     lookup_molecule_by_name,
 )
 
+# # Try RDKit for 2D drawing, molecular descriptors, and SMILES→3D
+# try:
+#     from rdkit import Chem
+#     from rdkit.Chem import Draw, AllChem, RDKFingerprint
+#     from rdkit.Chem import Descriptors, Crippen
+#     from rdkit.Chem import QED
+#     try:
+#         from rdkit.Chem.MACCSkeys import GenMACCSKeys
+#     except Exception:
+#         GenMACCSKeys = None
+#     HAS_RDKIT = True
+# except ImportError:
+#     HAS_RDKIT = False
+#     AllChem = None
+#     RDKFingerprint = None
+#     GenMACCSKeys = None
+
 # Try RDKit for 2D drawing, molecular descriptors, and SMILES→3D
 try:
     from rdkit import Chem
@@ -43,11 +60,13 @@ try:
     except Exception:
         GenMACCSKeys = None
     HAS_RDKIT = True
-except ImportError:
+except Exception as e:  # broaden beyond ImportError
+    import streamlit as st
     HAS_RDKIT = False
     AllChem = None
     RDKFingerprint = None
     GenMACCSKeys = None
+    st.sidebar.error(f"RDKit import failed: {e!r}")
 
 # Fingerprint types: (display label, key for _compute_fingerprint_single)
 FINGERPRINT_OPTIONS = [
