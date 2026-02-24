@@ -1,0 +1,12 @@
+# Keep API keys and secrets out of version control
+.streamlit/secrets.toml
+venv/
+__pycache__/
+*.pyc
+*.pyo
+.ipynb_checkpoints/
+
+# Large / local data not needed for deploy
+*.pdb
+*.pml
+outputs/

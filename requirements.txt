@@ -1,0 +1,29 @@
+streamlit>=1.32
+py3Dmol
+pandas
+rdkit-pypi
+plotly
+matplotlib
+requests
+plip
+
+# PyMOL 3D visualization in Jupyter (py3Dmol for in-notebook viewing)
+py3Dmol>=2.0.3
+requests>=2.28.0
+ipywidgets>=8.0.0
+jupyter>=1.0.0
+notebook>=6.5.0
+
+# Streamlit GUI (run: streamlit run pymol3d_app.py)
+streamlit>=1.28.0
+
+# 2D molecule drawing (SMILES → PNG)
+rdkit>=2023.3.1
+
+# Optional: 2D interaction plot (PLIP) tab. Install OpenBabel first, then:
+#   pip install plip matplotlib  (static plot)
+#   pip install plip plotly kaleido  (interactive plot + PNG export)
+# plip
+# matplotlib>=3.5
+# plotly>=5.0
+# kaleido>=0.2
