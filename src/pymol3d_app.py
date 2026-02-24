@@ -49,15 +49,6 @@ from pymol3d_lib import (
 #     RDKFingerprint = None
 #     GenMACCSKeys = None
 
-import streamlit as st  # This must be at the very top
-
-st.title("My Awesome App")
-
-# INSERT YOUR IMAGE CODE HERE
-st.image("src/pymol3d.png", caption="Pymol3D")
-
-st.write("Welcome to my deployed app!")
-
 # Try RDKit for 2D drawing, molecular descriptors, and SMILES→3D
 try:
     from rdkit import Chem
