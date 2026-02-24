@@ -1,7 +1,7 @@
 streamlit>=1.32
 py3Dmol
 pandas
-rdkit-pypi
+rdkit-pypi==2022.9.5
 plotly
 matplotlib
 requests
