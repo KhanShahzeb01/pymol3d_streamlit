@@ -54,7 +54,7 @@ import streamlit as st  # This must be at the very top
 st.title("My Awesome App")
 
 # INSERT YOUR IMAGE CODE HERE
-st.image("pymol3d.png", caption="Pymol3D")
+st.image("src/pymol3d.png", caption="Pymol3D")
 
 st.write("Welcome to my deployed app!")
 
